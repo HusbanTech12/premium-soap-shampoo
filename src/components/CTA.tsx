@@ -8,8 +8,8 @@ export default function CTA() {
     <section className="py-24 lg:py-32 bg-surface-muted">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="relative rounded-2xl overflow-hidden bg-foreground text-background py-20 lg:py-28 px-8 lg:px-20">
-          <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-accent/10 blur-3xl -translate-y-1/2 translate-x-1/3" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-accent-subtle/5 blur-3xl translate-y-1/2 -translate-x-1/3" />
+          <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-accent/15 blur-3xl -translate-y-1/2 translate-x-1/3 animate-[glow-pulse_5s_ease-in-out_infinite] pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-accent-subtle/10 blur-3xl translate-y-1/2 -translate-x-1/3 animate-[glow-pulse_7s_ease-in-out_infinite_2s] pointer-events-none" />
 
           <div className="relative grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="space-y-8">
@@ -35,7 +35,7 @@ export default function CTA() {
                     placeholder="Enter your email"
                     className="flex-1 px-5 py-3.5 bg-white/5 border border-white/10 rounded-lg text-sm text-background placeholder:text-foreground-muted/50 focus:outline-none focus:border-accent/50 transition-colors"
                   />
-                  <button className="px-6 py-3.5 bg-accent text-background text-sm tracking-wider uppercase rounded-lg hover:bg-accent-strong transition-colors font-medium shrink-0">
+                  <button className="px-6 py-3.5 bg-accent text-background text-sm tracking-wider uppercase rounded-lg hover:bg-accent-strong hover:shadow-[0_0_24px_-4px_rgba(199,154,86,0.5)] transition-all duration-300 font-medium shrink-0">
                     Subscribe
                   </button>
                 </div>
@@ -67,13 +67,13 @@ export default function CTA() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/shop"
-                  className="px-8 py-3.5 bg-accent text-background text-sm tracking-[0.15em] uppercase rounded-lg hover:bg-accent-strong transition-all font-medium"
+                  className="px-8 py-3.5 bg-accent text-background text-sm tracking-[0.15em] uppercase rounded-lg hover:bg-accent-strong hover:shadow-[0_0_30px_-4px_rgba(199,154,86,0.5)] transition-all duration-300 font-medium"
                 >
                   Shop Now
                 </Link>
                 <Link
                   href="/about"
-                  className="px-8 py-3.5 border border-white/20 text-background text-sm tracking-[0.15em] uppercase rounded-lg hover:bg-white/5 transition-all"
+                  className="px-8 py-3.5 border border-white/20 text-background text-sm tracking-[0.15em] uppercase rounded-lg hover:bg-white/5 hover:border-white/40 hover:shadow-[0_0_20px_-4px_rgba(255,255,255,0.1)] transition-all duration-300"
                 >
                   Our Story
                 </Link>

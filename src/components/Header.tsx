@@ -30,10 +30,10 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="relative group">
-              <span className="font-serif text-3xl italic text-foreground tracking-tight">
+              <span className="font-serif text-3xl italic text-foreground tracking-tight group-hover:text-glow-accent transition-all duration-300">
                 Semzi
               </span>
-              <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-foreground/80 group-hover:w-full transition-all duration-300" />
+              <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent group-hover:w-full transition-all duration-300" />
             </Link>
 
             <nav className="hidden md:flex items-center gap-12">
@@ -52,14 +52,14 @@ export default function Navbar() {
             <div className="flex items-center gap-3">
               <button
                 aria-label="Search"
-                className="p-2.5 text-foreground-muted hover:text-foreground hover:bg-foreground/10 rounded-full transition-all"
+                className="p-2.5 text-foreground-muted hover:text-foreground hover:bg-accent-subtle hover:shadow-[0_0_16px_-2px_rgba(199,154,86,0.25)] rounded-full transition-all duration-300"
               >
                 <Search className="w-4 h-4" />
               </button>
               <button
                 onClick={() => setCartOpen(true)}
                 aria-label="Cart"
-                className="relative p-2.5 text-foreground-muted hover:text-foreground hover:bg-foreground/10 rounded-full transition-all"
+                className="relative p-2.5 text-foreground-muted hover:text-foreground hover:bg-accent-subtle hover:shadow-[0_0_16px_-2px_rgba(199,154,86,0.25)] rounded-full transition-all duration-300"
               >
                 <ShoppingBag className="w-4 h-4" />
                 {totalItems > 0 && (

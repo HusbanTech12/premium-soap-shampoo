@@ -18,6 +18,9 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-gradient-to-b from-foreground/40 via-foreground/20 to-foreground/50" />
 
+      <div className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full bg-accent/10 blur-[120px] animate-[glow-pulse_4s_ease-in-out_infinite] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full bg-accent/8 blur-[100px] animate-[glow-pulse_6s_ease-in-out_infinite_1s] pointer-events-none" />
+
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 min-h-screen flex items-center">
         <div className="max-w-2xl space-y-8">
           <Reveal delay={0.2}>
@@ -32,7 +35,7 @@ export default function Hero() {
               Natural Soap.
               <br />
               <span
-                className="italic bg-gradient-to-r from-accent to-accent-strong bg-clip-text text-transparent"
+                className="italic bg-gradient-to-r from-accent to-accent-strong bg-clip-text text-transparent text-glow-accent"
                 style={{ fontFamily: "var(--font-instrument-serif)" }}
               >
                 Nothing Harsh.
@@ -50,15 +53,15 @@ export default function Hero() {
           <Reveal delay={0.8} className="flex flex-wrap items-center gap-5 pt-2">
             <Link
               href="/shop"
-              className="px-10 py-4 bg-accent text-background text-sm tracking-[0.15em] uppercase rounded-lg hover:bg-accent-strong transition-all font-medium"
+              className="group relative px-10 py-4 bg-accent text-background text-sm tracking-[0.15em] uppercase rounded-lg font-medium transition-all duration-300 hover:bg-accent-strong hover:shadow-[0_0_30px_-4px_rgba(199,154,86,0.5)]"
             >
-              Shop All
+              <span className="relative z-10">Shop All</span>
             </Link>
             <Link
               href="/about"
               className="group flex items-center gap-3 text-white/80 text-sm tracking-[0.15em] uppercase hover:text-white transition-colors"
             >
-              <span className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-white/50 transition-colors">
+              <span className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-white/50 group-hover:shadow-[0_0_20px_-2px_rgba(255,255,255,0.2)] transition-all duration-300">
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

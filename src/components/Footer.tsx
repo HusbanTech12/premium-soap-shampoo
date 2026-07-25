@@ -55,20 +55,20 @@ export default function Footer() {
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-2.5 bg-white/5 border border-white/10 rounded-sm text-sm text-background placeholder:text-foreground-muted/50 focus:outline-none focus:border-accent/50"
                 />
-                <button className="px-4 py-2.5 bg-accent text-background rounded-sm hover:bg-accent-strong transition-colors">
+                <button className="px-4 py-2.5 bg-accent text-background rounded-sm hover:bg-accent-strong hover:shadow-[0_0_20px_-4px_rgba(199,154,86,0.5)] transition-all duration-300">
                   <ChevronRight className="w-4 h-4" />
                 </button>
               </div>
             </div>
 
             <div className="flex gap-4">
-              <Link href="#" aria-label="Instagram" className="text-xs tracking-widest uppercase text-foreground-muted hover:text-accent transition-colors">
+              <Link href="#" aria-label="Instagram" className="text-xs tracking-widest uppercase text-foreground-muted hover:text-accent hover:text-glow-accent transition-all duration-300">
                 Instagram
               </Link>
-              <Link href="#" aria-label="Twitter" className="text-xs tracking-widest uppercase text-foreground-muted hover:text-accent transition-colors">
+              <Link href="#" aria-label="Twitter" className="text-xs tracking-widest uppercase text-foreground-muted hover:text-accent hover:text-glow-accent transition-all duration-300">
                 Twitter
               </Link>
-              <Link href="#" aria-label="Pinterest" className="text-xs tracking-widest uppercase text-foreground-muted hover:text-accent transition-colors">
+              <Link href="#" aria-label="Pinterest" className="text-xs tracking-widest uppercase text-foreground-muted hover:text-accent hover:text-glow-accent transition-all duration-300">
                 Pinterest
               </Link>
             </div>
