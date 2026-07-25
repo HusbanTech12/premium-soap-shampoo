@@ -63,9 +63,9 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="bg-foreground p-10 lg:p-12 space-y-6"
+              className="bg-foreground p-10 lg:p-12 space-y-6 hover:bg-foreground/95 hover:shadow-[0_0_40px_-8px_rgba(199,154,86,0.15)] transition-all duration-500"
             >
-              <Quote className="w-8 h-8 text-accent/40" strokeWidth={1} />
+              <Quote className="w-8 h-8 text-accent/40 group-hover:text-accent/60 transition-colors duration-300" strokeWidth={1} />
 
               <div className="flex gap-0.5">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (

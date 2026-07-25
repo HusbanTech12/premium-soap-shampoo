@@ -6,9 +6,12 @@ interface PriceDisplayProps {
   className?: string;
 }
 
+const formatPrice = (cents: number) =>
+  `PKR ${(cents / 100).toLocaleString("en-PK")}`;
+
 export default function PriceDisplay({ priceCents, compareAtCents, className }: PriceDisplayProps) {
-  const price = `$${(priceCents / 100).toFixed(0)}`;
-  const comparePrice = compareAtCents ? `$${(compareAtCents / 100).toFixed(0)}` : undefined;
+  const price = formatPrice(priceCents);
+  const comparePrice = compareAtCents ? formatPrice(compareAtCents) : undefined;
 
   return (
     <div className={cn("flex items-center gap-2 font-mono", className)}>

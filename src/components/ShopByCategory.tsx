@@ -53,17 +53,17 @@ export default function ShopByCategory() {
               className="flex flex-col items-center gap-4 group"
             >
               <Link href={category.href}>
-                <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full overflow-hidden ring-2 ring-border/50 ring-offset-4 ring-offset-background transition-all duration-300 group-hover:ring-accent group-hover:ring-offset-background">
+                <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full overflow-hidden ring-2 ring-border/50 ring-offset-4 ring-offset-background transition-all duration-500 group-hover:ring-accent group-hover:ring-offset-background group-hover:shadow-[0_0_40px_-4px_rgba(199,154,86,0.35)]">
                   <Image
                     src={category.image}
                     alt={category.name}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                     sizes="(max-width: 768px) 128px, 176px"
                   />
                 </div>
               </Link>
-              <span className="text-sm tracking-[0.1em] uppercase text-foreground-muted group-hover:text-foreground transition-colors">
+              <span className="text-sm tracking-[0.1em] uppercase text-foreground-muted group-hover:text-accent group-hover:text-glow-accent transition-all duration-300">
                 {category.name}
               </span>
             </Reveal>

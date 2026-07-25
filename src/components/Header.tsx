@@ -25,15 +25,15 @@ export default function Navbar() {
     <>
       <motion.header
         {...fadeUp}
-        className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border"
+        className="fixed top-0 left-0 right-0 z-50 bg-accent-subtle border-b border-border"
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="relative group">
-              <span className="font-serif text-3xl italic text-foreground tracking-tight">
+              <span className="font-serif text-3xl italic text-foreground tracking-tight group-hover:text-glow-accent transition-all duration-300">
                 Semzi
               </span>
-              <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-foreground/80 group-hover:w-full transition-all duration-300" />
+              <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent group-hover:w-full transition-all duration-300" />
             </Link>
 
             <nav className="hidden md:flex items-center gap-12">
@@ -52,14 +52,14 @@ export default function Navbar() {
             <div className="flex items-center gap-3">
               <button
                 aria-label="Search"
-                className="p-2.5 text-foreground-muted hover:text-foreground hover:bg-foreground/10 rounded-full transition-all"
+                className="p-2.5 text-foreground-muted hover:text-foreground hover:bg-accent-subtle hover:shadow-[0_0_16px_-2px_rgba(199,154,86,0.25)] rounded-full transition-all duration-300"
               >
                 <Search className="w-4 h-4" />
               </button>
               <button
                 onClick={() => setCartOpen(true)}
                 aria-label="Cart"
-                className="relative p-2.5 text-foreground-muted hover:text-foreground hover:bg-foreground/10 rounded-full transition-all"
+                className="relative p-2.5 text-foreground-muted hover:text-foreground hover:bg-accent-subtle hover:shadow-[0_0_16px_-2px_rgba(199,154,86,0.25)] rounded-full transition-all duration-300"
               >
                 <ShoppingBag className="w-4 h-4" />
                 {totalItems > 0 && (
@@ -92,7 +92,7 @@ export default function Navbar() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="border-t border-border bg-background overflow-hidden"
+              className="border-t border-border bg-accent-subtle overflow-hidden"
             >
               <div className="px-6 py-8 space-y-6">
                 {navLinks.map((link) => (

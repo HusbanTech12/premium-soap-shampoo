@@ -18,14 +18,14 @@ export default function BrandStory() {
   return (
     <section className="py-24 lg:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center group">
           <Reveal direction="left">
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-surface-muted">
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-surface-muted group-hover:shadow-[0_0_50px_-8px_rgba(199,154,86,0.2)] transition-shadow duration-700">
               <Image
                 src="/images/soap-natural.jpg"
                 alt="Natural soap ingredients and handmade process"
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
@@ -58,7 +58,7 @@ export default function BrandStory() {
                   {ingredients.map((ing) => (
                     <span
                       key={ing}
-                      className="px-3 py-1.5 text-[10px] tracking-wider uppercase bg-surface border border-border/50 rounded-md text-foreground-muted"
+                      className="px-3 py-1.5 text-[10px] tracking-wider uppercase bg-surface border border-border/50 rounded-md text-foreground-muted hover:border-accent/40 hover:text-foreground hover:shadow-[0_0_12px_-2px_rgba(199,154,86,0.2)] transition-all duration-300 cursor-default"
                     >
                       {ing}
                     </span>
