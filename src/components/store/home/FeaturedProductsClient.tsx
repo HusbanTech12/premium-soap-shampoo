@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Leaf } from "lucide-react";
 import { useAnimations } from "@/lib/animations";
 import ProductGrid from "@/components/ProductGrid";
 import ProductCard from "@/components/ProductCard";
@@ -31,27 +31,38 @@ export default function FeaturedProductsClient({
   const products = activeTab === "best-sellers" ? featured : newArrivals;
 
   return (
-    <section className="py-24 bg-background">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div {...fadeUp} className="text-center mb-12">
-          <h2 className="font-serif text-3xl sm:text-4xl text-foreground mb-4">
+    <section className="py-28 bg-background relative overflow-hidden">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-accent-subtle/30 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <motion.div {...fadeUp} className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <div className="h-px w-12 bg-accent/30" />
+            <Leaf className="w-4 h-4 text-accent" />
+            <span className="text-[11px] tracking-[0.2em] uppercase text-accent font-medium">
+              Curated Collection
+            </span>
+            <Leaf className="w-4 h-4 text-accent" />
+            <div className="h-px w-12 bg-accent/30" />
+          </div>
+          <h2 className="font-serif text-4xl sm:text-5xl text-foreground mb-5 leading-tight">
             Our Favorites
           </h2>
-          <p className="text-foreground-muted max-w-2xl mx-auto">
+          <p className="text-foreground-muted max-w-xl mx-auto text-base leading-relaxed">
             Handpicked soaps and shampoos our community can&apos;t stop raving
-            about.
+            about. Crafted with intention, made with love.
           </p>
         </motion.div>
 
-        <motion.div {...fadeUp} className="flex justify-center gap-2 mb-10">
+        <motion.div {...fadeUp} className="flex justify-center gap-3 mb-14">
           {tabs.map((tab) => (
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`px-5 py-2 rounded-lg text-sm tracking-wide transition-colors ${
+              className={`relative px-7 py-2.5 rounded-full text-sm tracking-wide font-medium transition-all duration-300 ${
                 activeTab === tab.key
-                  ? "bg-accent text-white"
-                  : "bg-surface-muted text-foreground-muted hover:text-foreground"
+                  ? "bg-foreground text-background shadow-lg shadow-foreground/10"
+                  : "text-foreground-muted hover:text-foreground hover:bg-surface-muted"
               }`}
             >
               {tab.label}
@@ -65,13 +76,13 @@ export default function FeaturedProductsClient({
           ))}
         </ProductGrid>
 
-        <motion.div {...fadeUp} className="text-center mt-12">
+        <motion.div {...fadeUp} className="text-center mt-16">
           <Link
             href="/shop"
-            className="inline-flex items-center gap-2 text-accent hover:text-accent-strong transition-colors text-sm tracking-wide"
+            className="group inline-flex items-center gap-3 px-8 py-3.5 border border-accent/30 hover:border-accent hover:bg-accent/5 rounded-full text-sm tracking-wide text-foreground transition-all duration-300"
           >
             View All Products
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </Link>
         </motion.div>
       </div>
