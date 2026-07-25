@@ -1,6 +1,15 @@
 import { getFeaturedProducts, getRecentProducts } from "@/lib/db-queries";
+import { products as staticProducts } from "@/lib/products";
 import type { Product } from "@/lib/products";
 import FeaturedProductsClient from "./FeaturedProductsClient";
+
+function getStaticFeatured(): Product[] {
+  return staticProducts.filter((p) => p.badge !== undefined);
+}
+
+function getStaticNewArrivals(): Product[] {
+  return staticProducts;
+}
 
 export default async function FeaturedProducts() {
   let featured: Product[] = [];
@@ -12,7 +21,8 @@ export default async function FeaturedProducts() {
       getRecentProducts(8),
     ]);
   } catch {
-    // DB unreachable — render section with empty arrays
+    featured = getStaticFeatured();
+    newArrivals = getStaticNewArrivals();
   }
 
   return (
