@@ -25,7 +25,7 @@ export default function Navbar() {
     <>
       <motion.header
         {...fadeUp}
-        className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border"
+        className="fixed top-0 left-0 right-0 z-50 bg-accent-subtle border-b border-border"
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
@@ -92,7 +92,7 @@ export default function Navbar() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="border-t border-border bg-background overflow-hidden"
+              className="border-t border-border bg-accent-subtle overflow-hidden"
             >
               <div className="px-6 py-8 space-y-6">
                 {navLinks.map((link) => (
