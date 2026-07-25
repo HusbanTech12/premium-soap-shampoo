@@ -45,16 +45,14 @@ export default function Features() {
           </h2>
         </Reveal>
 
-        <div className="grid md:grid-cols-2 grid-rows-2 h-[420px] border border-border/60 rounded-xl overflow-hidden bg-surface">
+        <div className="grid md:grid-cols-2 gap-5 h-[420px]">
           {features.map((feature, idx) => {
             const Icon = feature.icon;
             return (
               <Reveal
                 key={feature.title}
                 delay={idx * 0.1}
-                className={`flex flex-col justify-center p-10 lg:p-12 space-y-4 h-full ${
-                  idx < 2 ? "border-b border-border/60" : ""
-                } ${idx % 2 === 0 ? "md:border-r md:border-border/60" : ""}`}
+                className="flex flex-col justify-center p-10 lg:p-12 space-y-4 h-full rounded-[2rem] bg-surface shadow-[0_2px_16px_-2px_rgba(43,33,24,0.06)]"
               >
                 <div className="w-10 h-10 rounded-full bg-accent-subtle flex items-center justify-center">
                   <Icon className="w-5 h-5 text-accent" strokeWidth={1.5} />
